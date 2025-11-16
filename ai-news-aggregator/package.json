@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint",
-  "test": "vitest",
-  "test:watch": "vitest watch"
-},
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest",
+    "test:watch": "vitest watch"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.81.1",
     "axios": "^1.13.2",
