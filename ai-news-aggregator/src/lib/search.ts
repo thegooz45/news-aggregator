@@ -12,11 +12,19 @@ export async function getQueryEmbedding(query: string): Promise<number[]> {
   return res.data[0].embedding
 }
 
+// NEW: Pure filter
+export function filterByTitle<T extends { title: string }>(
+  articles: T[],
+  query: string
+): T[] {
+  const q = query.toLowerCase()
+  return articles.filter(a => a.title.toLowerCase().includes(q))
+}
+
 export async function searchArticles(
   query: string,
   embedding?: number[]
 ): Promise<any[]> {
-  // Vector search
   if (embedding) {
     const { data, error } = await supabase.rpc('match_articles', {
       query_embedding: embedding,
@@ -27,13 +35,10 @@ export async function searchArticles(
     return data || []
   }
 
-  // Fallback: keyword search
   const { data, error } = await supabase
     .from('articles')
     .select('*')
-    .ilike('title', `%${query}%`)
-    .limit(10)
-
   if (error) throw error
-  return data || []
+
+  return filterByTitle(data || [], query).slice(0, 10)
 }
