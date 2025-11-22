@@ -47,9 +47,9 @@ describe('AI Module - TDD', () => {
   })
 
   it('summarizes article in 2-3 sentences and extracts 5 keywords', async () => {
-    const openaiModule = await import('openai')
-    const OpenAI = openaiModule.default
-    const client = new OpenAI({ apiKey: 'fake' })
+    const OpenAIApi = require('openai')
+    const OpenAI = OpenAIApi.default
+    const client = new OpenAI({ apiKey: 'fake'})
 
     client.chat.completions.create.arguments({
       choices: [{
@@ -73,9 +73,9 @@ describe('AI Module - TDD', () => {
   })
 
   it('handles OpenAI error gracefully', async () => {
-    const openaiModule = await import('openai')
-    const OpenAI = openaiModule.default
-    const client = new OpenAI({ apiKey: 'fake' })
+    const OpenAIApi = require('openai')
+    const OpenAI = OpenAIApi.default
+    const client = new OpenAI({ apiKey: 'fake'})
 
     client.chat.completions.create.arguments(new Error('Rate limit'))
 

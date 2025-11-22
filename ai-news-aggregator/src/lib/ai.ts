@@ -2,9 +2,9 @@
 import OpenAI from 'openai'
 import type { RawArticle } from './news-fetcher'
 
-const openai = new OpenAI({
+const OpenAIApi = require('openai')
+const openai = new OpenAIApi({
   apiKey: process.env.OPENAI_API_KEY!,
-  dangerouslyAllowBrowser: true
 })
 
 export async function summarizeAndEmbed(article: RawArticle) {
