@@ -2,7 +2,6 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { upsertArticle, getRecentArticles } from '@/lib/db'
 import { supabase } from '@/lib/supabase'
 
-// Mock Supabase
 vi.mock('@/lib/supabase', () => ({
   supabase: {
     from: vi.fn(),

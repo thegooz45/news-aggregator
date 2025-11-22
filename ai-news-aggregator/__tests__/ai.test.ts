@@ -1,7 +1,5 @@
-// __tests__/ai.test.ts
 import { vi } from 'vitest'
 
-// MOCK OPENAI FIRST — BEFORE ANY IMPORT
 vi.mock('openai', async (importOriginal) => {
   const actual = await importOriginal<any>()
 
@@ -23,7 +21,6 @@ vi.mock('openai', async (importOriginal) => {
   }
 })
 
-// NOW IMPORT AFTER MOCK
 import { describe, it, expect, beforeEach, afterEach } from 'vitest'
 import { summarizeAndEmbed, extractKeywords } from '@/lib/ai'
 import type { RawArticle } from '@/lib/news-fetcher'

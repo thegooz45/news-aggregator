@@ -1,5 +1,3 @@
-// src/lib/ai.ts
-import OpenAI from 'openai'
 import type { RawArticle } from './news-fetcher'
 
 const OpenAIApi = require('openai')

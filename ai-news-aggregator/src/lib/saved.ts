@@ -1,4 +1,3 @@
-// src/lib/saved.ts
 import { supabase } from './supabase'
 
 export async function getCurrentUser() {

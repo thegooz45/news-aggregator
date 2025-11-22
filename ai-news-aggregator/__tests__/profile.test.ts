@@ -1,4 +1,3 @@
-// __tests__/profile.test.ts
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { saveArticle, getSavedArticles, unsaveArticle, filterByUserId } from '@/lib/profile'
 

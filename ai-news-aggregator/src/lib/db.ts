@@ -1,5 +1,4 @@
 import { supabase } from './supabase'
-import type { RawArticle } from './news-fetcher'
 
 export type DBArticle = {
   url: string
