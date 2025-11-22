@@ -1,4 +1,3 @@
-// src/app/(auth)/login/page.tsx
 'use client'
 
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'

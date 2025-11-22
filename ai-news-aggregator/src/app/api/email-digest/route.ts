@@ -1,4 +1,3 @@
-// src/app/api/email-digest/route.ts
 import { Resend } from 'resend'
 import { supabase } from '@/lib/supabase'
 

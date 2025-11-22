@@ -1,4 +1,3 @@
-// src/components/UserMenu.tsx
 'use client'
 
 import { useUser, useSupabase } from '@supabase/auth-helpers-react'
