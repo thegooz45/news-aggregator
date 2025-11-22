@@ -36,6 +36,13 @@ export function ArticleCard({ article }: { article: Article }) {
           ))}
         </div>
 
+        <div className="flex justify-between items-center mt-4">
+          <SaveButton articleId={article.id} />
+          <a href={article.url} target="_blank" className="text-blue-600 text-sm">
+          Read full article →
+         </a>
+        </div>
+
         <div className="flex justify-between items-center text-sm text-gray-500">
           <span>{article.source}</span>
           <a
