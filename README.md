@@ -4,8 +4,6 @@ hi! i'm brianna (she/they).
 one week ago i said “let’s see if i can build a full ai-powered personal news reader in 7 days.”  
 today it’s done. and it’s actually good... but still a bit broken.
 
-live demo → https://your-app.vercel.app (or whatever you deploy)
-
 ## what it did do
 
 - searches 1000s of articles with **vector similarity** (openai embeddings + supabase pgvector)  
